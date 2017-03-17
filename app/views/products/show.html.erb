@@ -6,13 +6,23 @@
 </p>
 
 <p>
-  <strong>Short Description of the Bike:</strong>
+  <strong>Description of the Bike:</strong>
   <%= @product.description %>
 </p>
 
 <p>
   <strong>Image of the Bike:</strong>
   <%= @product.image_url %>
+</p>
+
+<p>
+	<strong>Colour:</strong>
+	<%= @product.colour %>
+</p>
+
+<p>
+	<strong>Price:</strong>
+	<%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
