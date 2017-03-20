@@ -14,7 +14,7 @@
         <p><%= image_tag(product.image_url, class: "img-responsive") %></p>
         <p><%= product.description %></p>
         <p><%= product.colour %></p>
-        <p><strong>EUR <%= product.price %></strong></p>
+        <p><strong><%= product.price %></strong></p>
         
 
           <%= link_to 'New Product', new_product_path %> |
