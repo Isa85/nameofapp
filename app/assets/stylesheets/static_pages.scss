@@ -5,6 +5,11 @@
 
 html {
 	font-family: Montserrat, sans-serif;
+  width: 100%;
+  }
+
+  body {
+  margin: -33px;
   }
 
 
@@ -29,18 +34,17 @@ html {
   text-align: center;
 }
 
-.jumbotron {
-  background-image: url("start_bg.jpg");
+.image {  
+  background-attachment: fixed;
   background-size: cover;
-  height: 750px;
-  margin-bottom: -30px;
-  color: white;
+  
+  
 }
 
 // products
 
 .products {
-  padding-top: 50px;
+  padding-top: 70px;
   
 }
 
@@ -52,7 +56,7 @@ html {
 //about
 
 .about {
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: center;
 }
 
@@ -60,7 +64,7 @@ html {
 //contact
 
 .contact {
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: center;
 }
 
