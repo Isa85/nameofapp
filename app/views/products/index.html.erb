@@ -8,19 +8,11 @@
 
 <div class="container-fluid products">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-xs-6 col-md-4">        
-        <h1><%= product.name %></h1>
-        <p><%= image_tag(product.image_url, class: "img-responsive") %></p>
-        <p><%= product.description %></p>
-        <p><%= product.colour %></p>
-        <p><strong><%= product.price %></strong></p>
-        
-
-          <%= link_to 'New Product', new_product_path %> |
-          <%= link_to 'Edit', edit_product_path(product)%> |
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+    <% @products.each do |product| %>      
+      <%= render partial: "shared/product", locals: {product: product} %>
     <% end %>
-  </div>
+  </div> 
 </div>
+  
+    
+
