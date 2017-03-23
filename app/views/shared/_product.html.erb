@@ -1,6 +1,8 @@
 <div class="col-xs-6 col-md-4"> 	
    <h1><%= product.name %></h1>
-   <p><%= image_tag(product.image_url, class: "img-responsive") %></p>
+   <p><% if product.image_url.present? %>
+  	<%= image_tag(product.image_url, class: "img-responsive carousel-image") %>
+		<% end %></p>
    <p><%= product.description %></p>
    <p><%= product.colour %></p>
    <p><strong>EUR <%= product.price %></strong></p>

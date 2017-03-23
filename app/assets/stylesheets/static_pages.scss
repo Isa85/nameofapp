@@ -30,8 +30,7 @@ html {
   font-family: Montserrat, sans-serif;
   padding-right: 30px;
   padding-left: 30px;
-  max-width: 100%;
-  
+  max-width: 100%;  
 
 }
 
@@ -42,13 +41,10 @@ html {
   text-align: center;
 }
 
-.jumbotron {
-  background: url(start_bg_gr.jpg) no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  border: 0px;
+.image-row {
+  max-width: 60%;
+  margin: 80px auto;
+  padding: 2em 0;
 
 }
 
