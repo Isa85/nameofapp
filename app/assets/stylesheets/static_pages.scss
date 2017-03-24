@@ -34,6 +34,34 @@ html {
 
 }
 
+//carousel
+
+#carousel-example-generic {
+    padding-top: 50px;
+}
+
+.container-fluid {
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+
+
+.carousel-caption h3 {
+    color: #448AFF;
+    font-size: 4em;
+    
+}
+
+.carousel-caption p {
+    color: #757575;
+    padding-bottom: 250px;
+    font-size: 2em;
+}
+
 // index
 
 .index {  
