@@ -30,37 +30,40 @@ html {
   font-family: Montserrat, sans-serif;
   padding-right: 30px;
   padding-left: 30px;
-  max-width: 100%;  
+  max-width: 100%;
 
 }
 
 //carousel
 
 #carousel-example-generic {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
-.container-fluid {
-    margin: auto;
+.carousel {
+   
+    margin-right: -33px;
     max-width: 100%;
     padding-left: 0px;
     padding-right: 0px;
 
 }
 
-
-
-.carousel-caption h3 {
-    color: #448AFF;
-    font-size: 4em;
-    
+.carousel-image {
+  height: 550px;
+  max-height: 550px;
+  width: auto;
+  margin: auto;
 }
 
-.carousel-caption p {
-    color: #757575;
-    padding-bottom: 250px;
-    font-size: 2em;
+
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left {
+  color: #494949;
 }
+
 
 // index
 
