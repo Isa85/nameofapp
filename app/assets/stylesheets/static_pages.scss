@@ -11,6 +11,16 @@ html {
 
   }
 
+h1 {
+  font-size: 2.3em;
+  color: grey;
+  font-weight: 800em;
+}
+
+h3 {
+  font-size: 1.8em;
+
+}
   body {
     margin: -33px;
  
@@ -19,6 +29,7 @@ html {
   * {
   box-sizing: border-box;
   }
+
 
 
 //navbar
@@ -50,7 +61,7 @@ html {
 }
 
 .carousel-image {
-  height: 550px;
+  height: 450px;
   max-height: 550px;
   width: auto;
   margin: auto;

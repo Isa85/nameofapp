@@ -3,8 +3,8 @@
    <p><% if product.image_url.present? %>
   	<%= image_tag(product.image_url, class: "img-responsive carousel-image") %>
 		<% end %></p>
-   <p><%= product.description %></p>
-   <p><%= product.colour %></p>
-   <p><strong>EUR <%= product.price %></strong></p>
+   <h3><p><%= product.description %></p></h3>
+   <h3><p><%= product.colour %></p></h3>
+   <h3><p><strong>EUR <%= product.price %></strong></p></h3>   
 </div><!-- /col -->
  
