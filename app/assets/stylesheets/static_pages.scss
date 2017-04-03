@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//* { border: 1px solid red;}
 
 html, body {
 	font-family: Montserrat, sans-serif;
@@ -27,9 +28,7 @@ h3 {
   font-size: 1.8em;
 }
   
-body {
-  margin: -33px; 
-}
+
 
 //navbar
 .navbar {    
@@ -109,4 +108,5 @@ body {
   text-align: left;
   font: normal 16px sans-serif;
   padding: 45px 50px;
+  width: 100%;
 }
