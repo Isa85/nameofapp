@@ -52,6 +52,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'sqlite3'
+  gem 'wdm', '>= 0.1.0'
 end
 
 group :production do
@@ -62,5 +63,7 @@ gem 'devise'
 
 gem 'listen'
 
-gem 'wdm', '>= 0.1.0'
+
+	#CanCanCan Installation
+gem 'cancancan', '~> 1.10'
 
