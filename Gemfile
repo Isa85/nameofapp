@@ -53,3 +53,9 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'devise'
+
+gem 'listen'
+
+gem 'wdm', '>= 0.1.0'
