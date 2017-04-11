@@ -1,24 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name of Bike:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Description of the Bike:</strong>
-  <%= @product.description %>
+  <%= image_tag(@product.image_url, class: "img-responsive") %>
 </p>
 
 <p>
-  <strong>Image of the Bike:</strong>
-  <%= @product.image_url %>
+  <%= @product.description %>
 </p>
 
+<!--
 <p>
 	<strong>Colour:</strong>
 	<%= @product.colour %>
 </p>
+-->
 
 <p>
 	<strong>Price:</strong>
