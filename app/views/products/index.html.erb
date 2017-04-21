@@ -6,11 +6,10 @@
 </div>
 -->
 
-<div class="container-fluid products">  
+<div class="container-fluid products" id="product_index">  
   <% @products.each do |product| %>      
   <%= render partial: "shared/product", locals: {product: product} %>
   <% end %>  
 </div>
   
-    
 

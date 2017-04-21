@@ -13,6 +13,7 @@ html, body {
   }
 
 .edit,
+.container-fluid contact,
 .new-product,
 .panel-body,
 .login,
@@ -73,7 +74,15 @@ h3 {
   color: #494949;
 }
 
+
 // products
+
+.show_product {
+  font-family: Montserrat;
+  padding-top: 60px;
+  text-align: center;
+}
+
 
 .products {
   padding-top: 70px;
@@ -84,6 +93,14 @@ h3 {
   text-align: center;
 }
 
+#product-index {
+  font-family: Montserrat;
+
+}
+
+.img-responsive-show {
+  margin-left: 30px;
+}
 
 //about
 
