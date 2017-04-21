@@ -1,0 +1,233 @@
+/* line 1, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 7, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+html, body {
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 15, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.edit,
+.container-fluid contact,
+.new-product,
+.panel-body,
+.login,
+.signup {
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+/* line 25, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+h1 {
+  font-size: 2.3em;
+  font-weight: 800em;
+}
+
+/* line 30, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+h3 {
+  font-size: 1.8em;
+}
+
+/* line 37, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar {
+  background-color: #0197E6;
+  border-color: #0197E6;
+  letter-spacing: 0.05em;
+  color: white;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width: 100%;
+}
+
+/* line 52, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+#carousel-example-generic {
+  padding-top: 90px;
+}
+
+/* line 56, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.carousel {
+  margin-right: -33px;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 5px;
+}
+
+/* line 65, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.carousel-image {
+  width: auto;
+  margin: auto;
+}
+
+/* line 71, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left {
+  color: #494949;
+}
+
+/* line 80, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.show_product {
+  font-family: Montserrat;
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* line 87, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.products {
+  padding-top: 70px;
+}
+
+/* line 92, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.products div {
+  text-align: center;
+}
+
+/* line 96, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+#product-index {
+  font-family: Montserrat;
+}
+
+/* line 101, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.img-responsive-show {
+  margin-left: 30px;
+}
+
+/* line 107, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about {
+  padding-top: 70px;
+  text-align: center;
+}
+
+/* line 115, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact {
+  padding-top: 90px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+/* line 124, C:/Users/Isabella/Documents/Careerfoundry/rails-app-project/nameofapp/app/assets/stylesheets/static_pages.scss */
+.footer {
+  background-color: #0197E6;
+  border-color: #0197E6;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
