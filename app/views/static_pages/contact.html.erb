@@ -4,6 +4,22 @@
 
   <%= flash[:notice] %>
 
+  <div class="row">
+      <div class="col-md-4 col-xs-12" id="contact-details">
+        <div class="phone">
+          <h2><span class="glyphicon glyphicon-glyphicon glyphicon-phone-alt"></span><br>call us:</h2>
+            <p>(0049) 10 20 30 400</p>
+        </div><!--end phone-->
+        <div class="adress">
+          <h2><span class="glyphicon glyphicon-glyphicon glyphicon-pencil"></span><br>write us:</h2>
+          <p>Bike Berlin <br> Main Street 80 <br> 50505 Berlin</p>
+        </div><!--end adress-->
+        <div class="e-mail">
+          <h2><span class="glyphicon glyphicon-glyphicon glyphicon-envelope"></span><br>mail us:</h2>
+          <p>contact@bikeberlin.com</p>
+        </div><!--end e-mail-->
+      </div>
+
 <%= form_tag("/static_pages/thank_you") do %>
 <div class="row">
   <div class="col-md-4">
