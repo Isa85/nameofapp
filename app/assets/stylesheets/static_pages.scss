@@ -4,6 +4,10 @@
 
 //* { border: 1px solid red;}
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
 	font-family: Montserrat, sans-serif;
   width: 100%;
@@ -32,19 +36,30 @@ h3 {
 }
   
 
-
 //navbar
 .navbar {    
   background-color: #0197E6;
   border-color: #0197E6;
   letter-spacing: 0.05em;
-  color: white;
   font-size: 16px; 
   font-family: Montserrat, sans-serif;
   padding-right: 30px;
   padding-left: 30px;
   max-width: 100%;
 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, 
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: grey;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
 }
 
 //carousel
@@ -98,10 +113,21 @@ h3 {
 
 }
 
-.img-responsive-show {
-  margin-left: 30px;
+.img-responsive show {
+  height: 70%;
+  width: 70%;
+  margin-left: 50px;
 }
 
+p {
+  display: block;
+}
+
+product-specs {
+  marging-left: 80px;
+  margin-top: 80px;
+  margin-right: 80px;
+}
 
 //about
 
@@ -115,9 +141,11 @@ h3 {
 
 .contact {
   padding-top: 90px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   text-align: left;
 }
+
+
 
 
 //footer

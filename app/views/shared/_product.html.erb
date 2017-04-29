@@ -5,7 +5,6 @@
   	<%= image_tag(product.image_url, class: "img-responsive carousel-image") %>
 		<% end %></p>
    <h3><p><%= product.description %></p></h3>
-   <h3><p><%= product.colour %></p></h3>
    <h3><p><strong>EUR <%= product.price %></strong></p></h3> 
    <%= link_to 'Show', product %>
    <%= link_to 'Edit', edit_product_path(product) %>
