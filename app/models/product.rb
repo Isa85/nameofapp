@@ -17,9 +17,9 @@ class Product < ApplicationRecord
   		comments.average(:rating).to_f
 	end
 
-	validates :name, presence: true
-		validates :user, presence: true
-  	validates :product, presence: true
-  	validates :rating, numericality: { only_integer: true }
+validates :name, presence: true
+  validates :price, numericality: true
+  validates :description, presence: true
+  validates :image_url, format: { with: %r{.(jpg|png)\Z}i, message: 'must be a URL for JPG or PNG image.' }
 end
 

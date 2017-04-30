@@ -13,31 +13,27 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field(:name, size:36, class: "form-control") %>
   </div>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area(:description, cols:35, rows:8, class: "form-control") %>
   </div>
 
   <div class="field">
     <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :colour %>
-    <%= f.text_field :colour %>
+    <%= f.text_field(:image_url, size:36, class: "form-control") %>
   </div>
 
   <div class="field">
     <%= f.label :price %>
-    <%= f.text_field :price %><br>
+    <%= f.text_field(:price, size:8, class: "form-control") %><br>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 
+ 
 <% end %>
