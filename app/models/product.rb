@@ -19,7 +19,9 @@ class Product < ApplicationRecord
 
 validates :name, presence: true
   validates :price, numericality: true
-  validates :description, presence: true
+  validates :description, presence: true  
   validates :image_url, format: { with: %r{.(jpg|png)\Z}i, message: 'must be a URL for JPG or PNG image.' }
+  validates :rating, numericality: true
+  validates :body, presence: true
 end
 
