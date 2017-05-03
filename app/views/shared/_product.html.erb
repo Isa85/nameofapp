@@ -12,7 +12,7 @@
    <% if can? :create, :edit, :destroy, @product %> 
    <%= link_to 'New Product', new_product_path, class: "btn btn-primary btn-sm" %>      
     <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary btn-sm" %>
-   <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm" %><br>
+   <%= link_to 'Destroy', product.destroy, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm" %><br>
    <% end %>
 	</div>
 </div>
