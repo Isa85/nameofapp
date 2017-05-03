@@ -22,8 +22,7 @@
         	<%= f.label :body, "Comments" %>
           	<%= f.text_area(:body, cols:8, rows:4, class: "form-control") %>
     
-    
-    	<div class="rating">
+        	<div class="rating">
     	</div>  
       <p><%= f.submit "Submit" %></p>
     </div>
@@ -39,7 +38,7 @@
     	</div>
     	<%= will_paginate @comments, :container => false %>
   	</div></p>
-		
-		<p><%= link_to 'Edit', edit_product_path(@product) %> |
+		<% if can? :update, @product %>
+		<p><%= link_to 'Edit', edit_product_path(@product) %><% end %>
 		<%= link_to 'Back', products_path %><br></p>
 </div>
