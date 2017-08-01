@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem ruby '2.2.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
@@ -51,15 +52,10 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'sqlite3'
- 
-end
+
 
 group :production do
   gem 'pg'
-end
-
-group :test do
-	gem 'rspec-rails', '~> 3.5'
 end
 
 
@@ -68,6 +64,11 @@ gem 'devise'
 gem 'listen'
 #gem 'listen', '~> 3.0'
 
+gem 'devise'
+
+gem 'listen'
+
+
 	#CanCanCan Installation
 gem 'cancancan', '~> 1.10'
 
@@ -75,5 +76,7 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 
 # Gemfile Active Admin
+
 gem 'activeadmin', github: 'activeadmin'
+
 
