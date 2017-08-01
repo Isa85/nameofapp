@@ -58,6 +58,11 @@ group :production do
   gem 'pg'
 end
 
+group :test do
+	gem 'rspec-rails', '~> 3.5'
+end
+
+
 gem 'devise'
 
 gem 'listen'
