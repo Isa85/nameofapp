@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem ruby '2.2.6'
+#gem ruby '2.2.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
@@ -44,15 +44,19 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
 end
 
 
 group :development do
-  gem 'rspec-rails', '~> 3.5'
+ 
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'sqlite3'
-
+  gem 'listen'
+  #gem 'listen', '~> 3.0'
+end
 
 group :production do
   gem 'pg'
@@ -61,20 +65,8 @@ end
 
 gem 'devise'
 
-gem 'listen'
-#gem 'listen', '~> 3.0'
-
-gem 'devise'
-
-gem 'listen'
-
-
 	#CanCanCan Installation
 gem 'cancancan', '~> 1.10'
 
 # Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'
-
-# Gemfile Active Admin
-
-gem 'activeadmin', github: 'activeadmin'
