@@ -1,11 +1,15 @@
 class Product < ApplicationRecord
+	validates :name, presence: true
+	validates :price, numericality: true
+	validates :description, presence: true  
+	validates :image_url, format: { with: %r{.(jpg|png)\Z}i, message: 'must be a URL for JPG or PNG image.' }
 	has_many :orders
 	has_many :comments
+
 	def self.search(search_term)
-  	Product.where("name LIKE ?", "%#{search_term}%")
-	else
-	Product.where("name ilike ?", "%#{search_term}%")
-	end
+    like_operator = Rails.env.production? ? 'ilike' : 'like'
+    Product.where("name #{like_operator} ?", "%#{search_term}%")
+  	end
 
 	def highest_rating_comment
   		comments.rating_desc.first
@@ -17,9 +21,6 @@ class Product < ApplicationRecord
   		comments.average(:rating).to_f
 	end
 
-	validates :name, presence: true
-  validates :price, numericality: true
-  validates :description, presence: true  
-  validates :image_url, format: { with: %r{.(jpg|png)\Z}i, message: 'must be a URL for JPG or PNG image.' }
+
 end
 
