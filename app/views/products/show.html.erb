@@ -27,6 +27,10 @@
     </div>
       <% end %>
     	<% end %>
+      <%= form_tag "/payments/create" do %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+      <%= render partial: "shared/stripe_checkout_button", class:"btn btn-default"  %>
+    <% end %>
     </div>
 
      <%= render 'comments' %>
