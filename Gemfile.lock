@@ -58,6 +58,7 @@ GEM
     bcrypt (3.1.11-x86-mingw32)
     bcrypt-ruby (3.1.1.rc1)
     bcrypt-ruby (3.1.1.rc1-x86-mingw32)
+    brakeman (3.7.0)
     builder (3.2.3)
     byebug (9.0.6)
     cancancan (1.16.0)
@@ -266,6 +267,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   bcrypt-ruby (= 3.1.1.rc1)
+  brakeman
   byebug
   cancancan (~> 1.10)
   coffee-rails (~> 4.2)
