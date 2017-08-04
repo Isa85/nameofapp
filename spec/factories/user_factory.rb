@@ -13,3 +13,5 @@ FactoryGirl.define do
     id
     admin true
   end
+
+end
