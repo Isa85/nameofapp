@@ -1,4 +1,4 @@
-function refreshRating() {
+var refreshRating = function() {
 
 
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
