@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function(){
 
-	$(".img-zoom").elevateZoom();
 
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
@@ -9,4 +8,12 @@ $(document).on('turbolinks:load', function(){
         return $(this).attr('data-score');
       }
     });
+}
+
+$(document).on('turbolinks:load', function(){
+  
+  refreshRating();
+  
+  $(".img-zoom").elevateZoom();
+  
 });
