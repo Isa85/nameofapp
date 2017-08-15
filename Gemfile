@@ -75,4 +75,6 @@ gem 'activeadmin'
 
 gem 'stripe'
 
+gem 'dalli'
+
 gem "brakeman", :require => false

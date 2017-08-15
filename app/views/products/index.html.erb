@@ -6,10 +6,11 @@
 </div>
 -->
 
-<div class="container-fluid products" id="product_index">  
+<div class="container-fluid products" id="product_index"> 
+	<% cache(cache_key_for_products) do %>
   <% @products.each do |product| %>      
   <%= render partial: "shared/product", locals: {product: product} %>
   <% end %>  
 </div>
   
-
+<% end %> 
