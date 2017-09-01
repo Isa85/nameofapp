@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products do
   resources :comments
+  mount ActionCable.server => '/cable'
   end
   
   resources :orders, only: [:index, :show, :create, :destroy]

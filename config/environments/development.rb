@@ -55,4 +55,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # Make sure dynamic links in emails from development environments generate the right URLs.
+  config.app_generators.javascript_engine = :javascript
 end
