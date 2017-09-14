@@ -71,7 +71,6 @@ gem 'cancancan', '~> 1.10'
 # Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'
 
-gem 'activeadmin'
 
 gem 'stripe'
 
