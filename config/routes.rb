@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
-  resources :users
-  resources :products do
-  resources :comments
-  mount ActionCable.server => '/cable'
+   ActiveAdmin.routes(self)
+    devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "registrations" }
+    resources :users
+    resources :products do
+    resources :comments
+    mount ActionCable.server => '/cable'
   end
   
   resources :orders, only: [:index, :show, :create, :destroy]
