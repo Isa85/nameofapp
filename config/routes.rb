@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :comments
   end
   
-  mount ActionCable.server => '/cable'
   
   resources :orders, only: [:index, :show, :create, :destroy]
 
@@ -22,4 +21,6 @@ Rails.application.routes.draw do
 
   #get 'static_pages/thank_you'
   #get 'static_pages/landing_page'
+
+  mount ActionCable.server => '/cable'
 end

@@ -7,3 +7,4 @@ class ProductChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 end
+ActionCable.server.broadcast 'product_channel', comment: "Hello World", average_rating: 5
