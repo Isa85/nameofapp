@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe UsersController do
-
   before do
     @user = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user)
