@@ -1,59 +1,17 @@
-
-
-/* $(document).on('ready page:load', function(){
-  $('.img-zoom').elevateZoom();
-  $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
-  $('.rated').raty({ path: '/assets',
-    readOnly: true,
-    score: function() {
-      return $(this).attr('data-score');
-    }
-  });
-});
-*/
-
-// Script for Raty
-  /* var refreshRating = function() {
-    $('.product-rating').raty( {path: '/assets', scoreName: 'comment[rating]' });
-    $('.product-rated').raty({ path: '/assets',
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      }
-    });
-  };
-  // End Raty
-
-$(document).on('turbolinks:load', function() {
-
-  // Script for elevateZoom
-  $('.elevate-zoom').elevateZoom({
-  zoomType: "lens",
-  lensShape: "round",
-  lensSize: 100
-  });
-  // End elevateZoom
-
-  // Call Raty
-  refreshRating();
-});
-
-*/
-
 var refreshRating = function() {
   $('.rating').raty({
+    path: '/images',
     scoreName: 'comment[rating]'
   });
   $('.rated').raty({
-    starHalf: '<%= asset_path 'star-half.png' %>',
-    starOff: '<%= asset_path 'star-off.png' %>',
-    starOn: '<%= asset_path 'star-on.png' %>',
+    path: '/images',
     readOnly :true,
     score: function() {
       return $(this).attr('data-score');
     }
   });
 };
+
 
 $(document).on('turbolinks:load ajaxSuccess', function(){
 /* Elevate Zoom Plugin */
