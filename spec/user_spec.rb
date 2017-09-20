@@ -1,4 +1,4 @@
-user_spec.rbrequire 'rails_helper'
+require 'rails_helper'
 
 describe User do 
   context "testing validations" do
