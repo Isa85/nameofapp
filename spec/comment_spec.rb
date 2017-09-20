@@ -1,67 +1,19 @@
 require 'rails_helper'
 
 describe Comment do
-  context "when the comment has no rating" do
-    product = FactoryGirl.build(:product)
-    user = FactoryGirl.build(:user)
-    before do
-      product.comments.new(user: user, body: "Awful cup!", rating: nil)
+  context "Testing validations" do
+    
+    it "is not valid without a rating" do
+      expect(Comment.new(rating:nil)).not_to be_valid
     end
-    it "is not accepted" do
-      expect(product.comments.first).not_to be_valid
+    it "is not valid without text" do 
+      expect(Comment.new(body:nil)).not_to be_valid
     end
-  end    
-
-  context "when the comment has a negative rating" do
-    product = FactoryGirl.build(:product)
-    user = FactoryGirl.build(:user)
-    before do
-      product.comments.new(user: user, body: "Awful cup!", rating: -10)
+    it "is not valid without a user id" do
+      expect(Comment.new(user_id:nil)).not_to be_valid
+    end    
+    it "is not valid if a user doesn't use an integer" do
+      expect(Comment.new(user_id: 1, body:"dfaf", rating: "faf")).not_to be_valid
     end
-    it "is not accepted" do
-      expect(product.comments.first).not_to be_valid
-    end
-  end  
-  
-  context "when the comment has a very high rating" do
-    product = FactoryGirl.build(:product)
-    user = FactoryGirl.build(:user)
-    before do
-      product.comments.new(user: user, body: "Awful cup!", rating: 10)
-    end
-    it "is not accepted" do
-      expect(product.comments.first).not_to be_valid
-    end
-  end    
-  
-  context "when the comment has no body" do
-    product = FactoryGirl.build(:product)
-    user = FactoryGirl.build(:user)
-    before do
-      product.comments.new(user: user, body: "", rating: 1)
-    end
-    it "is not accepted" do
-      expect(product.comments.first).not_to be_valid
-    end
-  end  
-
-  context "when the comment has no user" do
-    product = FactoryGirl.build(:product)
-    user = FactoryGirl.build(:user)
-    before do
-      product.comments.new(body: "Awful cup!", rating: 1)
-    end
-    it "is not accepted" do
-      expect(product.comments.first).not_to be_valid
-    end
-  end  
-
-  context "when the comment has no product" do
-    it "is not accepted" do
-      user = FactoryGirl.build(:user)
-      comment = Comment.new(user: user, body: "Awful cup!", rating: 1)
-      expect(comment).not_to be_valid
-    end
-  end  
-
+  end
 end
