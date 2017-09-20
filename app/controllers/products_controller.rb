@@ -1,20 +1,29 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
+  load_and_authorize_resource
 
   # GET /products
   # GET /products.json
-  
   def index
-    
-    @products = params[:q].present? ? Product.search(params[:q]) : Product.all
-    @products = @products.order("created_at DESC").paginate(:page => params[:page], per_page: 6)
-    logger.debug "Search Results: #{@products.length}"
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+      # return search results
+    elsif (params[:aq] && !params[:aq].strip.empty?) || params[:has_carousel_picture]
+      admin_search = params[:aq]
+      carousel_image = params[:has_carousel_picture]
+      @products = Product.searchAdmin(admin_search, carousel_image)
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], per_page: 3)
+    @product.hit_it
+    @comments = @product.comments.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /products/new
@@ -24,6 +33,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+
   end
 
   # POST /products
@@ -33,7 +43,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to products_url, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -47,7 +57,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to products_url, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -74,6 +84,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+      params.require(:product).permit(:name, :description, :image_url, :color, :price, :carousel_image)
     end
 end

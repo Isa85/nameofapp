@@ -1,16 +1,14 @@
 class Comment < ApplicationRecord
-  belongs_to :user
-  belongs_to :product
-
-	  
   validates :body, presence: true
   validates :user, presence: true
   validates :product, presence: true
-  validates :rating, numericality: true
+  validates :rating, numericality: { only_integer: true }, :inclusion => 1..5
+  after_create_commit { CommentUpdateJob.perform_later(self, @user) }
+  belongs_to :user
+  belongs_to :product
 
-	scope :rating_desc, -> { order(rating: :desc) }
-	scope :rating_asc, -> { order(rating: :asc) }
-
-	after_create_commit { CommentUpdateJob.perform_later(self, @user) }
+  default_scope { order(created_at: :desc) }
+  
+  scope :rating_desc, -> { order(rating: :desc) }
   
 end
