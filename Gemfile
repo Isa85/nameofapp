@@ -79,9 +79,6 @@ gem "brakeman", :require => false
 
 gem 'redis-rails'
 
-gem 'redis-namespace'
-
-gem 'redis'
 
 gem "newrelic_rpm"
 
