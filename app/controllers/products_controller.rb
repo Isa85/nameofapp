@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
 def index
-    byebug
+    
     @products = params[:q].present? ? Product.search(params[:q]) : Product.all
     @products = @products.order("created_at DESC").paginate(:page => params[:page], per_page: 6)
     logger.debug "Search Results: #{@products.length}"
@@ -15,7 +15,7 @@ def index
   # GET /products/1
   # GET /products/1.json
   def show
-    @product.hit_it
+    
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 2)
   end
 
