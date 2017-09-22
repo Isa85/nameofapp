@@ -5,19 +5,17 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  def index
-    if params[:q]
-      search_term = params[:q]
-      @products = Product.search(search_term)
-      # return search results
-    elsif (params[:aq] && !params[:aq].strip.empty?) || params[:has_carousel_picture]
-      admin_search = params[:aq]
-      carousel_image = params[:has_carousel_picture]
-      @products = Product.searchAdmin(admin_search, carousel_image)
-    else
-      @products = Product.all
-    end
+def index
+  if params[:q]
+    search_term = params[:q]
+    @products = Product.where("name LIKE ?", "%#{search_term}%")
+  else
+    @products = Product.all
   end
+
+  respond_with @products
+end
+
 
   # GET /products/1
   # GET /products/1.json
