@@ -16,7 +16,7 @@ require 'rails_helper'
     it "doesnt allow non admin user to view" do 
       sign_in(@user2)
       get :index
-      expect(response).to redirect_to(root_path)
+      expect(response).to redirect_to('/login')
     end
   end
 end
